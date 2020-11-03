@@ -1,0 +1,27 @@
+
+
+monitor Application {
+	
+	import "dhl.demo.KafkaPlugin" as kafkaPlugin;
+	
+	action onload() {
+		
+		log "Loaded Application" at INFO;
+		
+		on all wait (60.0) {
+			log "The time is now "+currentTime.toString() at INFO;	
+		}
+		
+		on all TestEvent() as te {
+			
+			log "Received "+te.toString() at INFO;
+			
+			string value := "";
+			integer count := 0;
+			while (count < 100) {
+				count := count + 1;
+				value := value + count.toString();
+			}
+		}
+	}
+}

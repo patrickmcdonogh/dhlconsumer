@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+<SoftwareAG_License>
+<Component Id="SalesInfo">
+<SerialNumber>0000466941</SerialNumber>
+<LicenseKey>EC51D868484652130B26EB5C6DDCFF7C</LicenseKey>
+<CustomerID>3150000</CustomerID>
+<CustomerName>Software AG for Solution Book Internal USE ONLY</CustomerName>
+<ContractDetails>SOFTWARE AG internal license solely for sales promotion and internal training purposes. Please note that this access key is for your personal use only. Access and software shall not be forwarded to anybody else</ContractDetails>
+<ContractPosNumber/>
+<LicenseTypeDetails>Internal</LicenseTypeDetails>
+<AutoCallHome>No</AutoCallHome>
+</Component>
+<Component Id="ProductInfo">
+<ExpirationDate>2021/10/31</ExpirationDate>
+<OS>win</OS>
+<ProductCode>PAMCO</ProductCode>
+<ProductName>Apama Server</ProductName>
+<ProductVersion>10.1</ProductVersion>
+<Usage/>
+<RenewalDate/>
+<HigherLevPosNr/>
+<HigherLevProdCode/>
+<HigherLevProdName/>
+</Component>
+<Component Id="LicenseInfo">
+<PriceUnit>ST</PriceUnit>
+<PriceQuantity>1</PriceQuantity>
+<TypeOfInstallation/>
+<LicenseType/>
+<LicenseVersion>1.2</LicenseVersion>
+<Metering>MNO</Metering>
+<ExtendedRights/>
+</Component>
+<Component Id="ApamaServer">
+<ProductCode>PAM</ProductCode>
+<ProductVersion>10.1</ProductVersion>
+</Component>
+</SoftwareAG_License>

@@ -1,0 +1,26 @@
+package ppm.kafka;
+
+/** 
+	This monitor is responsible for connections to kafka and initialising the Kafka plugin
+*/
+monitor KafkaConsumer {
+	
+	import "dhl.demo.KafkaPlugin" as kafkaPlugin;
+	
+	action onload() {
+		log "Loaded monitor KafkaConsumer" at INFO;
+		
+		on wait (2.0) {
+			
+			log "Starting Kafka Consumer" at INFO;
+			
+			kafkaPlugin.initialise("my-cluster-kafka-bootstrap:9092");
+			
+			boolean createdConsumer := kafkaPlugin.addKafkaTopicConsumer("shipments","ApamaCG");
+			log "Created consumer = "+createdConsumer.toString() at INFO;
+			
+			kafkaPlugin.start();
+		}
+		
+	}
+}

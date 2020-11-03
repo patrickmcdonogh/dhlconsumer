@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><configuration>
+<intAttribute key="com.apama.text.CONFIG_VERSION" value="3"/>
+<listAttribute key="com.apama.text.COMPONENTS">
+<listEntry>
+
+
+
+<component clear="false" correlatorLog="false" correlatorLogLocation="logs/${LAUNCH_CONFIG_NAME}_${CORRELATOR_NAME}.output.log" dataLocationDir="${project_loc:DHLDemo}/database/defaultCorrelator" distMemoryStoreEnabled="false" enabled="true" extraArguments="" hostname="localhost" inputLog="false" inputLogLocation="logs/defaultCorrelator_${START_TIME}_${ID}.input.log" isAutomaticOrdering="false" isPeristanceEnabled="false" javaEnabled="true" jmsResiliencyEnabled="false" logLevel="INFO" maxMBLocalHeap="512" maxMBLocalHeapEnabled="false" maxMBLocalOffHeap="16384" maxMBLocalOffHeapEnabled="false" name="defaultCorrelator" persistenceStartupOption="CLEAR_REINJECT" port="15903" reuse="false" type="CORRELATOR" workingDir="/DHLDemo" xConfigEnabled="true" xConfigLocation="${project_loc:DHLDemo}/config/CorrelatorConfig.yaml">
+<runtimeDependencyEntry enabled="true" path="/DHLDemo/DHLDemo java application files/DHLDemo.jar" type="PROJECT_JMON_FILE"/>
+<runtimeDependencyEntry enabled="false" path="/DHLDemo/plugin/DHLDemo.jar" type="PROJECT_JMON_FILE"/>
+<runtimeDependencyEntry enabled="true" path="/DHLDemo/eventdefinitions/EventDefinitions.mon" type="PROJECT_MON_FILE"/>
+<runtimeDependencyEntry enabled="true" path="/DHLDemo/monitors/Application.mon" type="PROJECT_MON_FILE"/>
+<runtimeDependencyEntry enabled="true" path="/DHLDemo/monitors/KafkaConsumer.mon" type="PROJECT_MON_FILE"/>
+<runtimeDependencyEntry enabled="true" path="/DHLDemo/monitors/KafkaPublisher.mon" type="PROJECT_MON_FILE"/>
+</component>
+</listEntry>
+</listAttribute>
+<booleanAttribute key="com.apama.text.OPEN_DASHBOARD_ATTR" value="true"/>
+<booleanAttribute key="com.apama.text.OPEN_DEFAULT_DASHBOARD_ATTR" value="true"/>
+<booleanAttribute key="com.apama.text.OPEN_ENABLE_DATAPLAYER_MODE_ATTR" value="false"/>
+<booleanAttribute key="com.apama.text.GENERATE_TIME_EVENTS_ATTR" value="true"/>
+<stringAttribute key="com.apama.text.DASHBOARD_PATH_ATTR" value=""/>
+<stringAttribute key="com.apama.text.DASHBOARD_VIEWER_ARGS" value=""/>
+</configuration>

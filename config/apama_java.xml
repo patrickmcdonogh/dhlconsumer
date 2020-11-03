@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java-applications>
+	<application name="DHLDemo">
+		<version>1.0</version>
+		<company></company>
+		<author></author>
+		<description></description>
+		<classpath>lib/kafka-clients-2.0.0.jar;lib/snappy-java-1.1.7.1.jar</classpath>
+		<build-auto>true</build-auto>
+		<content>
+			<file path="java/src/dhl/demo/KafkaPlugin.java" project=""/>
+			<file path="java/src/dhl/demo/MessageHandler.java" project=""/>
+			<file path="java/src/dhl/demo/KafkaMessageHandler.java" project=""/>
+			<file path="java/src/dhl/demo/TopicConsumerRunnable.java" project=""/>
+			<file path="java/src/dhl/demo/TopicProducer.java" project=""/>
+		</content>
+	</application>
+</java-applications>

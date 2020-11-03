@@ -1,0 +1,48 @@
+
+event PublishFrequency {
+	float seconds;
+	integer numberOfMessages;
+}
+
+monitor KafkaPublisher {
+	
+	import "dhl.demo.KafkaPlugin" as kafkaPlugin;
+	
+	integer loopNumber;
+	listener publisherTimer;
+	
+	action onload() {
+		log "Loaded monitor KafkaPublisher" at INFO;
+		
+		on wait (2.0) {
+			kafkaPlugin.initialise("my-cluster-kafka-bootstrap:9092");
+			
+			boolean createdProducer := kafkaPlugin.addKafkaTopicProducer("shipments","shipments");
+			log "Created producer = "+createdProducer.toString() at INFO; 
+			
+			kafkaPlugin.start();
+			
+			on all PublishFrequency() as publish {
+				
+				log "New "+publish.toString() at INFO;
+				
+				publisherTimer.quit();
+				
+				if publish.seconds > 0.0 {
+					
+					log "Will send "+publish.numberOfMessages.toString()+" messages every "+publish.seconds.toString()+" seconds" at INFO;
+					
+					publisherTimer := on all wait (publish.seconds) {
+						loopNumber := loopNumber + 1;
+						integer count := 0;
+						while (count < publish.numberOfMessages) {
+							count := count + 1;
+							TestEvent message := TestEvent("Message = "+loopNumber.toString()+" "+count.toString());
+							boolean sent := kafkaPlugin.publishMessage("shipments", message.toString(), false);
+						}
+					}
+				}
+			}
+		}
+	}
+}

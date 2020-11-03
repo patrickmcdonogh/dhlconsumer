@@ -1,0 +1,4 @@
+
+event TestEvent {
+	string text;
+}

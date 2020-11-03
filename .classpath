@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/ApamaJavaLibrary"/>
+	<classpathentry kind="src" path="java/src"/>
+	<classpathentry kind="lib" path="lib/kafka-clients-2.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/snappy-java-1.1.7.1.jar"/>
+	<classpathentry kind="output" path="java/bin"/>
+</classpath>
